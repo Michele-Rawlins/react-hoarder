@@ -1,6 +1,17 @@
 @import 'variables';
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
-  background-color: $favColor;
+  background: url('https://images.unsplash.com/photo-1463143296037-46790ff95a7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+h1 {
+  color: whitesmoke;
+  font-family: Pacifico;
 }
