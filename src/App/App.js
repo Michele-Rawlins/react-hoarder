@@ -57,6 +57,7 @@ class App extends React.Component {
   }
 
   render() {
+    const { authed } = this.state;
     return (
       <div className="App">
         <BrowserRouter>
@@ -69,7 +70,7 @@ class App extends React.Component {
                <PrivateRoute path='/mystuff' component={MyStuff} authed={authed}/>
                <PrivateRoute path='/new' component={New} authed={authed} />
                 <PublicRoute path='/auth' component={Auth} authed={authed} />
-                <Redirect from "*" to="/home"/>
+                <Redirect from= "*" to="/home"/>
              </Switch>
            </div>
          </div>
@@ -77,6 +78,7 @@ class App extends React.Component {
      </BrowserRouter>
     <MyNavbar/>
     {/* <Auth /> */}
+
       </div>
     );
   }
