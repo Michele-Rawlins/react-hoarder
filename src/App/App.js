@@ -16,9 +16,10 @@ import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
 
 import Auth from '../components/pages/Auth/Auth';
 import Home from '../components/pages/Home/Home';
-import MyStuff from '../components/pages/MyStuff/MyStuff';
+// import MyStuff from '../components/pages/MyStuff/MyStuff';
 import New from '../components/pages/New/New';
-
+import SingleItem from '../components/pages/SingleItem/SingleItem';
+import EditItem from '../components/pages/EditItem/EditItem';
 
 import fbConnnection from '../helpers/data/connection';
 
@@ -67,8 +68,10 @@ class App extends React.Component {
            <div className="row">
              <Switch>
                <PrivateRoute path='/home' component={Home} authed={authed} />
-               <PrivateRoute path='/mystuff' component={MyStuff} authed={authed}/>
+               {/* <PrivateRoute path='/mystuff' component={MyStuff} authed={authed}/> */}
                <PrivateRoute path='/new' component={New} authed={authed} />
+               <PrivateRoute path='/edit/:itemId' component={EditItem} authed={authed} />
+               <PrivateRoute path='/items/:itemId' component={SingleItem} authed={authed} />
                 <PublicRoute path='/auth' component={Auth} authed={authed} />
                 <Redirect from= "*" to="/home"/>
              </Switch>
@@ -76,10 +79,7 @@ class App extends React.Component {
          </div>
        </React.Fragment>
      </BrowserRouter>
-    <MyNavbar/>
-    {/* <Auth /> */}
-
-      </div>
+     </div>
     );
   }
 }
