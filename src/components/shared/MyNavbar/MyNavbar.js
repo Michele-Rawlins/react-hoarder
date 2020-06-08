@@ -35,24 +35,25 @@ class MyNavbar extends React.Component {
 
   render() {
     const { isOpen } = this.state;
+
     const buildNavbar = () => {
       const { authed } = this.props;
       if (authed) {
         return (
-      <Nav className="ml-auto" navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
+            </NavItem>
         <NavItem>
-          <NavLink tag={RRNavLink} to='/home'> Home<NavLink></NavLink></NavLink>
+          <NavLink tag={RRNavLink} to='/new'>New Stuff</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink tah={RRNavLink} to='/new'> New Stuff</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink tah={RRNavLink} to='/stuff'> My Stuff</NavLink>
+          <NavLink tag={RRNavLink} to='/stuff'>My Stuff</NavLink>
         </NavItem>
         <NavItem>
         <NavLink onClick={this.logMeOut}>LogOut</NavLink>
         </NavItem>
-      </Nav>
+    </Nav>
         );
       }
       return <Nav className="ml-auto" navbar></Nav>;
