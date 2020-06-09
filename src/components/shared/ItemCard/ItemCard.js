@@ -18,7 +18,7 @@ class ItemCard extends React.Component {
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">{item.itemName}</h5>
-            <img className="item-pic" alt="item in collection">{item.itemImage}</img>
+            <img className="item-pic" src={item.itemImage} alt="item in collection"></img>
             <Link className="btn btn-info" to={singleLink}><i className="fas fa-binoculars"></i></Link>
             <Link className="btn btn-warning" to={editLink}><i className="fas fa-pencil-alt"></i></Link>
             <p className="card-text">{item.itemDescription}</p>

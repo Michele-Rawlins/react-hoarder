@@ -20,7 +20,7 @@ class SingleItem extends React.Component {
     return (
       <div className="SingleItem">
         <h1>{item.itemName}</h1>
-        <p>{item.itemImage}</p>
+        <img src={item.itemImage} alt="item"/>
         <p>{item.itemDescription}</p>
       </div>
     );
